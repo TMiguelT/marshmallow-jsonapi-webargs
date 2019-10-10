@@ -25,7 +25,7 @@ setup(
     extras_require={
         "tests": ["pytest"],
     },
-    python_requires=">=3.6",
+    python_requires=">=3.5",
     license="LGPLv3",
     keywords=(
         "marshmallow-jsonapi marshmallow marshalling serialization "
