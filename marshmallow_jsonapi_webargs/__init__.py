@@ -1,7 +1,7 @@
 """
 Includes fields designed solely for parsing query/URL parameters from JSON API requests
 """
-import typing
+from collections import namedtuple
 from enum import Enum
 
 import marshmallow as ma
@@ -41,13 +41,7 @@ class SortDirection(Enum):
     DESCENDING = 2
 
 
-class SortItem(typing.NamedTuple):
-    """
-    Represents a single entry in the list of fields to sort by
-    """
-
-    field: str
-    direction: SortDirection
+SortItem = namedtuple('SortItem', ['field', 'direction'])
 
 
 class SortField(fields.Field):
